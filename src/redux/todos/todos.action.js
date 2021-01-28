@@ -1,36 +1,49 @@
 import {axios} from 'axios'
+import * as actionTypes from './todos.actionTypes'
 const endpoint = 'https://adeleke-todo-list.herokuapp.com'
 
-export const fetctstart =()=>{
+export const fetctStart =()=>{
   return{
-    type : 'FETCH_START'
+    type : actionTypes.FETCH_START
   }
 }
 
 export const fetchFail =(error)=>{
   return {
-    type: 'FETCH_FAIL',
+    type: actionTypes.FETCH_FAIL,
     error: error
   }
 }
 
 export const fetchSuccess =(todos)=>{
   return {
-    type: 'FETCH_SUCCESS',
+    type: actionTypes.FETCH_SUCCESS,
     todos: todos
   }
 }
 
 export const fetchTodos =()=>{
 return dispatch=>{
-  dispatch(fetctstart()) 
-  axios.get(`${endpoint}/todos`).then(
-    res=> { const  todos = res.data;
+  dispatch(fetctStart()) 
+  axios.get(`${endpoint}/todos`)
+  .then((res)=> {const todos = res.data;
     dispatch(fetchSuccess(todos))
-    }
-  ).catch((error)=>{
+    })
+  .catch((error)=>{
     dispatch(fetchFail(error))
   })
 
 }
+}
+
+export const deleteTodos = (id)=>{
+  return dispatch=>{
+    axios(`${endpoint}/todos/${id}`)
+    .then((res)=>{
+      dispatch(fetchTodos())
+    })
+    .catch((error)=>{
+      dispatch(fetchFail(error))
+    })
+  }
 }
