@@ -2,13 +2,13 @@ import {newObject} from '../utils'
 
 
 
-const fetchStart =(state, action)=>{
+export const fetchStart =(state, action)=>{
   return newObject(state,{
     loading: true,
     error:null
   })
 }
-const fetchSuccess =(state, action)=>{
+export const fetchSuccess =(state, action)=>{
   return newObject(state,{
     todos: action.todos,
     loading: false,
@@ -16,7 +16,7 @@ const fetchSuccess =(state, action)=>{
   })
 }
 
-const fetchFail =(state, action)=>{
+export const fetchFail =(state, action)=>{
   return newObject(state,{
     loading: false,
     error:action.error

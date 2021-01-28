@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
 import * as actions from './redux/todos/todos.action.js'
 
 function App() {
@@ -27,17 +26,15 @@ function App() {
 }
 
 
-// const mapDispatchToProps =(dispatch) =>({
- 
-//     resfetch:()=> dispatch(actions.fetchTodos())
-  
-// })
-
-function mapDispatchToProps (dispatch){
- 
-return bindActionCreators({resDispatch: actions.fetchSuccess() }, dispatch)
- 
-  
+// const mapStateToProps = state=>{
+//   return{
+//     isloading: state.loading
+//   }
+// }
+const mapDispatchToProps = (dispatch)=>{
+  return {
+    fetchTodos: ()=> dispatch(actions.fetchTodos())
+  }
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps )(App);

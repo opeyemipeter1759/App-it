@@ -1,4 +1,4 @@
-import * as actionTypes from './todos.actionTypes'
+import * as actionTypes from './todos/todos.actionTypes'
 import {fetchStart, fetchFail, fetchSuccess} from './todos/todos.reducer'
 
 const initialState ={
