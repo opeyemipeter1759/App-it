@@ -21,7 +21,7 @@
   font-size: 1.6rem;
 }
 
-.navItems{
+.navItems {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
@@ -45,7 +45,7 @@
 }
 
 .navLinks:hover {
-  color:var(--btnColor);
+  color: var(--btnColor);
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
@@ -63,10 +63,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-
   .navItems {
     display: flex;
     flex-direction: column;
@@ -77,6 +73,7 @@
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
+    position: relative;
   }
 
   .navItems.active {
@@ -97,7 +94,6 @@
   .navLinks:hover {
     color: var(--btnColor);
     border-radius: 0;
-
   }
 
   .navbarLogo {
@@ -107,7 +103,7 @@
     transform: translate(25%, 50%);
   }
 
-  .bar{
+  .bar {
     display: block;
     position: absolute;
     top: 0;
@@ -136,7 +132,7 @@
   }
 
   .navLinksMobile:hover {
-    background:#222831;
+    background: #222831;
     color: #e8e8e8;
     border: 2px solid var(--btnColor);
     transition: 250ms;
