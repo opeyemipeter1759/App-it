@@ -1,0 +1,148 @@
+.navBar {
+  background: #222831;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.navbarLogo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.fa-firstdraft {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.navItems{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.navLinks {
+  color: var(--textColor);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.navLinks:hover {
+  color:var(--btnColor);
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.navLinksMobile {
+  display: none;
+}
+
+.bar {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .navItems {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .navItems.active {
+    background: #222831;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navLinks {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navLinks:hover {
+    color: var(--btnColor);
+    border-radius: 0;
+
+  }
+
+  .navbarLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .bar{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #e8e8e8;
+    font-size: 2rem;
+  }
+
+  .navLinksMobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    background: var(--btnColor);
+    text-decoration: none;
+    color: #e8e8e8;
+    font-size: 1.5rem;
+  }
+
+  .navLinksMobile:hover {
+    background:#222831;
+    color: #e8e8e8;
+    border: 2px solid var(--btnColor);
+    transition: 250ms;
+  }
+
+  button {
+    display: none;
+  }
+}
