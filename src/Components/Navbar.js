@@ -13,7 +13,10 @@ const closeMobileMenu =() => setClick(false)
     <>
       <nav className="navBar">
         <Link to='/' className="navbarLogo">
-          MyToDo
+          <i className="mt-2 fas fa-2x fa-tachometer-alt">
+          </i>
+           <span className="logoText"> <br/> App it</span> 
+          
         </Link>
         <div className="bar" onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars' } ></i>
