@@ -1,5 +1,5 @@
 .heading {
-  background-image: url(./Assests/hompage2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Assests/hompage2.jpg);
   background-position: center;
   background-size: cover;
   justify-content: center;
@@ -13,7 +13,7 @@
   padding-top: 80px;
   margin-left: 70px;
 }
-.getStarted {
+.getStarted {  
   display: block;
   text-align: center;
   padding: 0.5rem 5px 0.5rem 10px;
