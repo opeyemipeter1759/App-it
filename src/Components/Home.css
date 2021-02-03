@@ -58,8 +58,8 @@
     color: var(--textColor);
     justify-self: center;
     padding-top: 20px;
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: 140px;
+    margin-right: 140px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -69,14 +69,14 @@
   .homeLogoText {
     position: absolute;
     top: 160px;
-    left: 210px;
+    left: 160px;
     font-family: "Hachi Maru Pop", cursive;
     font-size: 1.2rem;
   }
   .landingText {
     color: var(--textColor);
     padding-top: 80px;
-    margin-left: 140px;
+    margin-left: 120px;
     font-size: 2rem;
     align-self: center;
     justify-content: center;
@@ -85,7 +85,7 @@
     display: block;
     text-align: center;
     padding: 0.5rem 5px 0.5rem 10px;
-    margin: 10rem 140px 3rem 170px;
+    margin: 10rem 140px 5rem 140px;
     border-radius: 20px;
     width: 30%;
     background: var(--btnColor);
