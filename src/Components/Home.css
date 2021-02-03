@@ -94,3 +94,46 @@
     font-size: 1rem;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .homeLogo {
+    display: block;
+    color: var(--textColor);
+    justify-self: center;
+    padding-top: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    align-self: center;
+    justify-content: center;
+  }
+  .homeLogoText {
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    font-family: "Hachi Maru Pop", cursive;
+    font-size: 1.2rem;
+  }
+  .landingText {
+    color: var(--textColor);
+    padding-top: 80px;
+    margin-left: 90px;
+    font-size: 1.6rem;
+    align-self: center;
+    justify-content: center;
+  }
+  .getStarted {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 5px 0.5rem 10px;
+    margin: 10rem 140px 5rem 115px;
+    border-radius: 20px;
+    width: 30%;
+    background: var(--btnColor);
+    text-decoration: none;
+    color: #e8e8e8;
+    font-size: 0.89rem;
+  }
+}
