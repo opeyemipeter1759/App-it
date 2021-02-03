@@ -18,16 +18,13 @@ function HomePage() {
               <Typewriter
               onInit={(typewriter
               )=>{typewriter
-              .typeString('You Can Make a Day...')
+              .typeString('You Can Make a Day.')
               .pauseFor(4000)
               .deleteAll()
-              .typeString('You can be Effective...')
+              .typeString('You can be Effective.')
               .pauseFor(4000)
               .deleteAll() 
-               .typeString('You can be Productive...')
-              .pauseFor(4000)
-              .deleteAll() 
-              .typeString('You can Plan it Out!...')
+              .typeString('You can Plan it Out!')
               .pauseFor(4000)
               .deleteAll() 
               .typeString('Just App it!...')

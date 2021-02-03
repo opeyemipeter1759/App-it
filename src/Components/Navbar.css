@@ -20,7 +20,7 @@
   margin: 0;
   padding-bottom: 30px;
   font-family: "Hachi Maru Pop", cursive;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .fa-firstdraft {
@@ -68,8 +68,15 @@
 .bar {
   display: none;
 }
-
 @media screen and (max-width: 960px) {
+  .logoText {
+    position: relative;
+    bottom: 10px;
+    font-size: 1rem;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
   .navItems {
     display: flex;
     flex-direction: column;
@@ -81,12 +88,7 @@
     opacity: 1;
     transition: all 0.5s ease;
   }
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Assests/hompage2.jpg);
-  background-position: center;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
+
   .navItems.active {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #fff;
     left: 0;
@@ -115,13 +117,13 @@
   }
 
   .bar {
-    display: block;
-    position: absolute;
+    display: none;
+    /* position: absolute;
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
-    cursor: pointer;
+    cursor: pointer; */
   }
 
   .fa-times {

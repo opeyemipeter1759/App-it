@@ -19,7 +19,7 @@
   display: block;
   text-align: center;
   padding: 0.5rem 5px 0.5rem 10px;
-  margin: 2rem 5rem;
+  margin: 4rem 5rem;
   border-radius: 4px;
   width: 20%;
   background: var(--btnColor);
@@ -27,14 +27,39 @@
   color: #e8e8e8;
   font-size: 1.5rem;
 }
-
 @media screen and (max-width: 960px) {
+  .landingText {
+    font-size: 90px;
+  }
+  .getStarted {
+    margin-top: 4rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .landingText {
+    font-size: 60px;
+  }
+  .getStarted {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 5px 0.5rem 10px;
+    margin: 4rem 5rem;
+    border-radius: 4px;
+    width: 30%;
+    background: var(--btnColor);
+    text-decoration: none;
+    color: #e8e8e8;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
   .homeLogo {
     display: block;
     color: var(--textColor);
     justify-self: center;
     padding-top: 20px;
-    margin-left: 230px;
+    margin-left: 190px;
+    margin-right: 190px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -43,16 +68,16 @@
   }
   .homeLogoText {
     position: absolute;
-    margin: 0;
-    padding: 0;
+    top: 160px;
+    left: 210px;
     font-family: "Hachi Maru Pop", cursive;
     font-size: 1.2rem;
   }
   .landingText {
     color: var(--textColor);
     padding-top: 80px;
-    margin-left: 150px;
-    font-size: 2.4rem;
+    margin-left: 140px;
+    font-size: 2rem;
     align-self: center;
     justify-content: center;
   }
@@ -60,7 +85,7 @@
     display: block;
     text-align: center;
     padding: 0.5rem 5px 0.5rem 10px;
-    margin: 10rem 0 2rem 182px;
+    margin: 10rem 140px 3rem 170px;
     border-radius: 20px;
     width: 30%;
     background: var(--btnColor);
