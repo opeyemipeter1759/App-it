@@ -1,4 +1,4 @@
-import {axios} from 'axios'
+import axios from 'axios'
 import * as actionTypes from './todos.actionTypes'
 const endpoint = 'https://adeleke-todo-list.herokuapp.com'
 
@@ -26,8 +26,10 @@ export const fetchTodos =()=>{
 return dispatch=>{
   dispatch(fetctStart()) 
   axios.get(`${endpoint}/todos`)
-  .then((res)=> {const todos = res.data;
+  .then((res)=> {
+    const todos = res.data;
     dispatch(fetchSuccess(todos))
+    console.log(res.data)
     })
   .catch((error)=>{
     dispatch(fetchFail(error))

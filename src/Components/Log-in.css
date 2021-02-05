@@ -1,0 +1,44 @@
+.loginBtnColor {
+  margin-top: 60px !important;
+  background-color: var(--btnColor) !important;
+  width: 30%;
+  padding: 4rem 0;
+  color: var(--textColor) !important;
+}
+.GoogleLoginBtnColor {
+  margin-top: 60px !important;
+  background-color: #30475e !important;
+  width: 50%;
+  padding: 4rem 0;
+  color: var(--textColor) !important;
+}
+.loginbtns {
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
+
+.LoginLogo {
+  display: block;
+  color: #30475e !important;
+  justify-self: center;
+  padding-top: 20px;
+  margin-left: 120px;
+  margin-right: 120px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  align-self: center;
+  justify-content: center;
+}
+.LoginLogoText {
+  font-family: "Hachi Maru Pop", cursive;
+  font-size: 1.2rem;
+}
+.emailInput {
+  margin-bottom: 40px !important;
+}
+.backHome {
+  color: #30475e !important;
+  margin-right: 360px;
+  font-size: 26px;
+}

@@ -3,7 +3,7 @@ import {fetchStart, fetchFail, fetchSuccess} from './todos/todos.reducer'
 
 const initialState ={
   error: null,
-  todos:[{4:'hello', 'opeyemi': 'me'}],
+  todos:[],
   loading: false
 }
 
