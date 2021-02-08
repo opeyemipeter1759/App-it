@@ -1,0 +1,22 @@
+.signUp {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--textColor) !important;
+}
+.signupBtnColor {
+  margin-top: 30px !important;
+  background-color: var(--btnColor) !important;
+  width: 30%;
+  padding: 4rem 0;
+  color: var(--textColor) !important;
+}
+.GooglesignupBtnColor {
+  margin-top: 30px !important;
+  background-color: #30475e !important;
+  width: 50%;
+  padding: 4rem 0;
+  color: var(--textColor) !important;
+}
+.signupbtns {
+  display: flex !important;
+  justify-content: space-evenly !important;
+}

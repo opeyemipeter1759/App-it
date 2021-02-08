@@ -1,3 +1,15 @@
+.gridBgC {
+  background-color: #30475e !important;
+  height: 100vh !important;
+}
+.links {
+  padding-top: 100px !important;
+}
+.logIn {
+  font-family: 'Big Shoulders Display', cursive;
+  color: var(--textColor) !important;
+}
+
 .loginBtnColor {
   margin-top: 30px !important;
   background-color: var(--btnColor) !important;

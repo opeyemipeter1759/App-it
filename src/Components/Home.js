@@ -34,7 +34,7 @@ function HomePage(props) {
             </p>
         </div>
         <Link 
-              to='/log-in' 
+              to='/sign-up' 
               className="getStarted"
               onClick={props.todos}
               >

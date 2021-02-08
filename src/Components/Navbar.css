@@ -111,7 +111,16 @@
     color: var(--btnColor);
     border-radius: 0;
   }
-
+  .navLinksLogin {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+  .navLinksLogin:hover {
+    color: var(--btnColor);
+    border-radius: 0;
+  }
   .navbarLogo {
     display: none;
   }
