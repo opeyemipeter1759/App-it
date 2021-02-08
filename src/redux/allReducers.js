@@ -4,7 +4,10 @@ import {fetchStart, fetchFail, fetchSuccess} from './todos/todos.reducer'
 const initialState ={
   error: null,
   todos:[],
-  loading: false
+  loading: false,
+  token: null,
+	redirect: false,
+	detail: null,
 }
 
 

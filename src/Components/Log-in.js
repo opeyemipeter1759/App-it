@@ -1,10 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import {Grid, Paper,TextField, Button} from '@material-ui/core';
+import  connect from 'react-redux';
+import * as actions from '../redux/auth/auth.actions'
 import './Log-in.css'
 
-function LogIn() {
+function LogIn(props) {
   const paperStyle={padding:20, height: '80vh', width:500, margin: '20px auto',}
+  const [state, setState] = useState({ username: "", password: "" });
+  const handleChange = (e) => {
+		setState({
+			...state,
+			[e.target.name]: e.target.value,
+		});
+  };
+  
+	const handleLogin = (e) => {
+		e.preventDefault();
+		props.onAuth(state.username, state.password);
+  };
+  
+  const {loginError, loading } = props;
 
   return (
     <div >
@@ -86,16 +102,21 @@ function LogIn() {
   )
 }
 
-export default LogIn;
+const mapStateToProps = (state) => {
+	return {
+		isLoading: state.isLoading,
+		loginError: state.error,
+		redirect: state.redirect,
+	};
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onAuth: (username, password) =>
+			dispatch(actions.authLogin(username, password)),
+	};
+};
+
+export default connect(mapDispatchToProps, mapStateToProps) (LogIn);
 
 
-            // <Grid item xs>
-            //   <Link href="#" variant="body2">
-            //     Forgot password?
-            //   </Link>
-            // </Grid>
-            // <Grid item>
-            //   <Link href="#" variant="body2">
-            //     {"Don't have an account? Sign Up"}
-            //   </Link>
-            // </Grid>
