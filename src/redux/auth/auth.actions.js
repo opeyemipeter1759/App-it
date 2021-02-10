@@ -6,7 +6,8 @@ const endpoint = 'https://adeleke-todo-list.herokuapp.com'
 
 export const authStart = ()=>{
   return {
-    type : actionTypes.AUTH_START
+    type : actionTypes.AUTH_START,
+    loading: true
   }
 }
 export const authSuccess = (redirect, detail, token)=>{

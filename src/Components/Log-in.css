@@ -6,7 +6,7 @@
   padding-top: 100px !important;
 }
 .logIn {
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   color: var(--textColor) !important;
 }
 
@@ -54,4 +54,10 @@
   color: #30475e !important;
   margin-right: 30rem;
   font-size: 26px;
+}
+.isLoading {
+  height: 204px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -40,6 +40,7 @@ function HomePage(props) {
               >
               Get Started
             </Link>
+
       </div>
     </>
   )

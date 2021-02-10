@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import {Grid, Paper,TextField, Button} from '@material-ui/core';
-import  connect from 'react-redux';
+import  {connect} from 'react-redux';
 import * as actions from '../redux/auth/auth.actions'
+import Loading from './loading'
+import Notifications from './notification'
 import './Log-in.css'
 
 function LogIn(props) {
@@ -17,18 +19,27 @@ function LogIn(props) {
   
 	const handleLogin = (e) => {
 		e.preventDefault();
-		props.onAuth(state.username, state.password);
+    props.onAuth(state.username, state.password);
   };
   
   const {loginError, loading } = props;
 
   return (
-    <div >
-
-      <Grid align='center' className="gridBgC" >   
+    <div>
+          {
+            loading === true?(
+                <div className="isLoading">
+                  <Loading/>
+                </div>
+            ) :
+          (
+              <Grid align='center' className="gridBgC" >   
             <h1 className="logIn" align="center">
               Log In
             </h1> 
+            {loginError && (
+              <Notifications message={`${loginError}`} variant='danger'/>
+            )}
           <Paper elevation={10} style ={paperStyle}>
               <Link
                 className="backHome"
@@ -44,28 +55,44 @@ function LogIn(props) {
                     </i>
                     <span className="LoginLogoText"> <br/> App-it</span> 
                   </div>
+
+                  <form onSubmit={handleLogin}>
+
                   <TextField
+                  name="username"
+                  value={state.username}
+                  onChange={handleChange}
                   className="emailInput" 
                   label='Username or Email' 
                   placeholder='Enter Username or Email' 
+                  type='text'
                   fullWidth 
+                  autoComplete= 'current-password'
                   required
                   />
-                  <TextField 
+                  <TextField
+                  name="password"
+                  value={state.password}
+                  onChange={handleChange}
                   className="PasswordInput"  
                   label = 'Password' 
                   placeholder ='Password' 
                   type="password"  
                   fullWidth 
+                  autoComplete='current-password'
                   required/>
                   <div 
                   className="loginbtns">    
                   <Button 
                   className="loginBtnColor" 
-                  type='submit'>
+                  type='submit' 
+                  >
                     Log In 
                   </Button>
-                  <Button
+                  </div>
+                  </form>
+                  <div>
+                    <Button
                   className="GoogleLoginBtnColor" 
                   type='submit'>
                     Continue with Google
@@ -91,12 +118,15 @@ function LogIn(props) {
                       {"Don't have an account? Sign Up"}
                     </Link>
                     </Grid>
-         </Grid>    
+        </Grid>    
                 </div>
 
                 </Paper>
 
       </Grid>
+            )
+          }
+      
     </div>
 
   )
@@ -104,7 +134,7 @@ function LogIn(props) {
 
 const mapStateToProps = (state) => {
 	return {
-		isLoading: state.isLoading,
+		isLoading: state.loading,
 		loginError: state.error,
 		redirect: state.redirect,
 	};
@@ -117,6 +147,6 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapDispatchToProps, mapStateToProps) (LogIn);
+export default connect(mapStateToProps, mapDispatchToProps) (LogIn);
 
 
